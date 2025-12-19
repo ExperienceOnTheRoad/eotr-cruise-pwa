@@ -4,24 +4,80 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Modalità Adulti – Cruise Edition</title>
+
   <link rel="manifest" href="/manifest.webmanifest">
   <meta name="theme-color" content="#0ea5e9" />
+
   <style>
-    body { font-family: -apple-system, system-ui, sans-serif; margin: 0; background:#0b1220; color:#e5e7eb; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 28px; }
-    .card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
-            border-radius: 18px; padding: 18px; }
-    a { color:#38bdf8; }
+    body {
+      font-family: -apple-system, system-ui, sans-serif;
+      margin: 0;
+      background: #0b1220;
+      color: #e5e7eb;
+    }
+
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .pdf-link {
+      display: block;
+      margin: 16px 0;
+      padding: 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
   </style>
 </head>
+
 <body>
   <main class="wrap">
     <div class="card">
+
       <h1>Modalità Adulti</h1>
-      <p>Missione 1 (demo): <strong>L’Enigma del Ponte</strong>.</p>
-      <p>Qui inseriremo storia, indizi, scelte e punteggio.</p>
-      <p><a href="/">← Torna alla Home</a></p>
+
+      <p>
+        Benvenuti nella <strong>Missione 1</strong> di Experience On The Road – Cruise Edition.
+      </p>
+
+      <p>
+        Scarica e apri il documento di gioco.  
+        Funziona anche in modalità aereo.
+      </p>
+
+      <a class="pdf-link" href="/missione-1.pdf" target="_blank" rel="noopener">
+        📄 Apri Missione 1 (PDF)
+      </a>
+
+      <p>
+        <a href="/">← Torna alla Home</a>
+      </p>
+
     </div>
   </main>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/sw.js");
+      });
+    }
+  </script>
 </body>
 </html>
