@@ -1,5 +1,5 @@
-const CACHE = "eotr-cruise-v1";
-const ASSETS = ["/", "/index.html", "/adult.html", "/kids.html", "/manifest.webmanifest", "/sw.js"];
+const CACHE = "eotr-cruise-v2";
+const ASSETS = ["/", "/index.html", "/adult.html", "/kids.html", "/manifest.webmanifest", "/sw.js", "/hero.png"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)));
